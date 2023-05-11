@@ -3,3 +3,6 @@
 *.csv
 .Python
 dist/	
+__pycache__
+spellbook_ingredients/__pycache__
+spellbook_ingredients/*.csv
