@@ -18,14 +18,21 @@ Example of usage, from the root of this repo:
 ➜ cd spellbook_ingredients 
 
 Dune/spellbook-ingredients/spellbook_ingredients 
-➜ poetry shell
-Spawning shell within /Users/antoniomendes/Library/Caches/pypoetry/virtualenvs/spellbook-ingredients-a4ovDk4L-py3.11
+➜ poetry install
+Installing dependencies from lock file
 
-Dune/spellbook-ingredients/spellbook_ingredients 
-➜ emulate bash -c '. /Users/antoniomendes/Library/Caches/pypoetry/virtualenvs/spellbook-ingredients-a4ovDk4L-py3.11/bin/activate'
+Package operations: 5 installs, 0 updates, 0 removals
+
+  • Installing certifi (2023.5.7)
+  • Installing charset-normalizer (3.1.0)
+  • Installing idna (3.4)
+  • Installing urllib3 (2.0.2)
+  • Installing requests (2.30.0)
+
+Installing the current project: spellbook-ingredients (0.1.0)
 
 Dune/spellbook-ingredients/spellbook_ingredients via spellbook-ingredients-a4ovDk4L-py3.11 
-➜ python3 main.py $MY_DUNE_API_KEY ~/Dune/spellbook/target/manifest.json                      
+➜ poetry run python3 main.py $MY_DUNE_API_KEY ~/Dune/spellbook/target/manifest.json                      
 Success writing CSV to Dune.com!
 ```
 
