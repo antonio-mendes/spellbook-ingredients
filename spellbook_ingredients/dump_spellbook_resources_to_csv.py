@@ -3,8 +3,9 @@ import csv
 import json
 
 def dump_spellbook_resources_to_csv(manifest_path, csv_path):
-    if os.path.exists(manifest_path):
-        with open(manifest_path) as f:
+    manifest_file = f'{manifest_path}target/manifest.json'
+    if os.path.exists(manifest_file):
+        with open(manifest_file) as f:
             manifest = json.load(f)
     else:
         raise Exception("Manifest file not found! Make sure you ran `dbt compile` first.")
