@@ -9,8 +9,8 @@ def dump_spellbook_resources_to_csv(manifest_path, csv_path):
         with open(manifest_file) as f:
             manifest = json.load(f)
     else:
-        raise Exception(
-            "Manifest file not found! Make sure you ran `dbt compile` in the Spellbook repo first.")
+        raise Exception("Manifest file not found! \
+            Make sure you ran `dbt compile` first.")
         exit(1)
 
     # Extract the names of all the tables that are resources to Spells

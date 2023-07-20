@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "spellbook-ingredients"
-version = "0.1.0"
+version = "0.1.1"
 description = "Gets tables used by Spellbook and writes them to Dune via API."
 authors = ["antonio-mendes <soeiromendes.antonio@gmail.com>"]
 readme = "README.md"
@@ -9,7 +9,40 @@ packages = [{include = "spellbook_ingredients"}]
 [tool.poetry.dependencies]
 python = "^3.11"
 requests = "^2.30.0"
+ruff = "^0.0.278"
 
+[tool.ruff]
+select = ["E", "F"]
+ignore = []
+fixable = ["ALL"]
+unfixable = []
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+]
+per-file-ignores = {}
+line-length = 88
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+target-version = "py311"
 
 [build-system]
 requires = ["poetry-core"]
