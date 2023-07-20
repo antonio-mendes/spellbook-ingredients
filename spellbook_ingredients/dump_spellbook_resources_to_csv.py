@@ -2,13 +2,15 @@ import os
 import csv
 import json
 
+
 def dump_spellbook_resources_to_csv(manifest_path, csv_path):
     manifest_file = f'{manifest_path}target/manifest.json'
     if os.path.exists(manifest_file):
         with open(manifest_file) as f:
             manifest = json.load(f)
     else:
-        raise Exception("Manifest file not found! Make sure you ran `dbt compile` first.")
+        raise Exception("Manifest file not found! \
+            Make sure you ran `dbt compile` first.")
         exit(1)
 
     # Extract the names of all the tables that are resources to Spells
@@ -27,4 +29,4 @@ def dump_spellbook_resources_to_csv(manifest_path, csv_path):
         writer = csv.writer(file)
         _ = writer.writerow(fieldnames)
         for name in resource_names:
-           _ = writer.writerow([name])
+            _ = writer.writerow([name])
