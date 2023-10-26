@@ -32,7 +32,7 @@ Package operations: 5 installs, 0 updates, 0 removals
 Installing the current project: spellbook-ingredients (0.1.0)
 
 Dune/spellbook-ingredients/spellbook_ingredients via spellbook-ingredients-a4ovDk4L-py3.11 
-➜ poetry run python3 main.py $MY_DUNE_API_KEY ~/Dune/spellbook/target/manifest.json                      
+➜ poetry run python3 main.py $MY_DUNE_API_KEY ~/Dune/spellbook/                      
 Success writing CSV to Dune.com!
 ```
 
